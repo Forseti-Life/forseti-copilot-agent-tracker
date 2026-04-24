@@ -2,11 +2,17 @@
 
 # Forseti Copilot Agent Tracker
 
+> **Compatibility mode:** the legacy `copilot_agent_tracker` console routes now
+> redirect into `drupal_langgraph` during consolidation.
+
 LangGraph console UI for orchestration observability and agent telemetry.
 
 ## Overview
 
-`copilot_agent_tracker` is a Drupal module that provides a web-based console for monitoring and managing Copilot agents coordinated by the LangGraph orchestrator.
+`copilot_agent_tracker` originally hosted the LangGraph console UI. During the
+current consolidation it remains enabled as a compatibility shim so existing
+legacy admin URLs keep working while `drupal_langgraph` becomes the primary
+module boundary.
 
 ## Features
 
