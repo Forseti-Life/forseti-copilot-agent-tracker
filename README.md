@@ -1,72 +1,12 @@
-<!-- AUTOMATION VALIDATION: 2026-04-23 - automation of development confirmed for this repo -->
+# Copilot Agent Tracker
 
-# Forseti Copilot Agent Tracker
+Standalone Drupal module repo for the Copilot Agent Tracker admin surface.
 
-> **Compatibility mode:** the legacy `copilot_agent_tracker` console routes now
-> redirect into `drupal_langgraph` during consolidation.
+## Current scope
 
-LangGraph console UI for orchestration observability and agent telemetry.
+- module scaffolding for LangGraph and agent-tracking UI work
+- admin/reporting-oriented Drupal integration points
 
-## Overview
+## Repo note
 
-`copilot_agent_tracker` originally hosted the LangGraph console UI. During the
-current consolidation it remains enabled as a compatibility shim so existing
-legacy admin URLs keep working while `drupal_langgraph` becomes the primary
-module boundary.
-
-## Features
-
-- **7 Console Sections:** Home, Build, Test, Run, Observe, Release, Admin
-- **Live Telemetry:** Node traces, execution metrics, drift detection, alerts
-- **Agent Monitoring:** Track agent dispatch, queue depth, concurrency
-- **Release Management:** Version promotion and rollback controls
-- **Governance:** RBAC, secrets, quotas, compliance
-
-## Installation
-
-```bash
-composer require forseti-life/forseti-copilot-agent-tracker
-drush pm:enable copilot_agent_tracker
-```
-
-## Configuration
-
-Set the `COPILOT_HQ_ROOT` environment variable to access live orchestrator telemetry:
-
-```bash
-export COPILOT_HQ_ROOT=/home/ubuntu/forseti.life/copilot-hq
-```
-
-## Routes
-
-All routes require the `administer copilot agent tracker` permission:
-
-- `/admin/reports/copilot-agent-tracker/langgraph-console` — Console home
-- `/admin/reports/copilot-agent-tracker/langgraph-console/build` — Build section
-- `/admin/reports/copilot-agent-tracker/langgraph-console/test` — Test section
-- `/admin/reports/copilot-agent-tracker/langgraph-console/run` — Run section
-- `/admin/reports/copilot-agent-tracker/langgraph-console/observe` — Observe section
-- `/admin/reports/copilot-agent-tracker/langgraph-console/release` — Release section
-- `/admin/reports/copilot-agent-tracker/langgraph-console/admin` — Admin section
-
-## Development
-
-This module is part of the Forseti-Life platform and integrates with the LangGraph orchestration engine.
-
-### Phase Roadmap
-
-- **Phase 1 (Done):** Stub controllers and routing
-- **Phase 2 (Pending):** Build section UI
-- **Phase 3 (Pending):** Test section UI
-- **Phase 4 (In Progress):** Run section UI
-- **Phase 5 (In Progress):** Observe section UI (telemetry dashboard)
-- **Phase 6 (Pending):** Release section UI
-- **Phase 7 (Pending):** Admin section UI
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT License - See [LICENSE](LICENSE)
+This repository owns the standalone `copilot_agent_tracker` module code. Broader orchestration runtime and HQ state live outside this repo.
