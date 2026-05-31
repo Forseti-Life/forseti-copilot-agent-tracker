@@ -1,3 +1,8 @@
 administer copilot agent tracker:
   title: 'Administer Copilot agent tracker'
-  description: 'Access the LangGraph management console stub pages.'
+  description: 'View agent status dashboards and manage agent tracking configuration.'
+
+post copilot agent telemetry:
+  title: 'Post Copilot agent telemetry'
+  description: 'Allow posting agent status/events to the internal telemetry endpoint.'
+
