@@ -1,5 +1,6 @@
-name: Copilot Agent Tracker
+name: 'Copilot Agent Tracker'
 type: module
-description: 'LangGraph management console stubs for Copilot Agent Tracker.'
-core_version_requirement: ^10 || ^11
-package: Custom
+description: 'Tracks Copilot agent status and work item progress (admin UI + internal API).'
+package: 'Forseti'
+core_version_requirement: ^11
+
